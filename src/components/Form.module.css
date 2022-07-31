@@ -1,0 +1,105 @@
+.wrapper {
+  max-width: 46rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  align-items: flex-start;
+}
+
+.form {
+  margin-top: -3.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form textarea {
+  width: 40rem;
+  height: 3.5rem;
+  background: var(--gray-500);
+  color: var(--gray-300);
+  padding: 1rem;
+  line-height: 1.4;
+
+  resize: none;
+
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+
+  overflow: hidden;
+}
+
+.form textarea:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 1px var(--purple-dark);
+  color: var(--white);
+}
+
+.form button {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: bold;
+
+  border: 0;
+  border-radius: 8px;
+}
+
+.form button svg {
+  margin-left: 0.5rem;
+}
+
+.form button:not(:disabled):hover {
+  background: var(--blue-light);
+  cursor: pointer;
+}
+
+.form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.headerList {
+  margin-top: 3.375rem;
+  margin-bottom: 1.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerList span {
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  font-weight: bold;
+  background: var(--gray-400);
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+}
+
+.task,
+.taskComplete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task strong {
+  color: var(--blue-light);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.taskComplete strong {
+  color: var(--purple-light);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
