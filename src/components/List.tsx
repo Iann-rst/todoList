@@ -10,28 +10,25 @@ interface Task {
 }
 
 interface Props {
-  todo: Task;
+  task: Task;
   onDeleteTask: (id: string) => void;
   tasksComplete: (id: string) => void;
 }
 
 
-export function List({ todo, onDeleteTask, tasksComplete }: Props) {
-
-
-  console.log(todo.id);
+export function List({ task, onDeleteTask, tasksComplete }: Props) {
 
   function deleteTask() {
-    onDeleteTask(todo.id);
+    onDeleteTask(task.id);
   }
 
   function handleSelectTask() {
-    tasksComplete(todo.id);
+    tasksComplete(task.id);
   }
   return (
     <div className={styles.list}>
-      <button className={todo.isComplete === true ? styles.selectedTaskT : styles.btnSelect} onClick={handleSelectTask}>{todo.isComplete && <Check weight='bold' />}</button>
-      <span className={todo.isComplete === true ? styles.text : ''}>{todo.content}</span>
+      <button className={task.isComplete === true ? styles.selectedTaskT : styles.btnSelect} onClick={handleSelectTask}>{task.isComplete && <Check weight='bold' />}</button>
+      <span className={task.isComplete === true ? styles.text : ''}>{task.content}</span>
       <button className={styles.btnDelete} onClick={deleteTask}>
         <Trash size={24} />
       </button>

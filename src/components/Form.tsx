@@ -95,7 +95,7 @@ export function Form() {
           ?
           <ListEmpty />
           :
-          tasks.map(task => <List key={task.id} todo={task} onDeleteTask={handleDeleteTask} tasksComplete={selectedTaskComplete} />)
+          tasks.map(task => <List key={task.id} task={task} onDeleteTask={handleDeleteTask} tasksComplete={selectedTaskComplete} />)
       }
 
     </main>
